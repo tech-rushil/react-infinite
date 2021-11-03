@@ -18,8 +18,8 @@ function App() {
         <Provider store={store}>
             <Suspense fallback={<Loader />}>
                 <Switch history={history}>
-                    <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
-                    <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
+                    <Route exact path={`${process.env.PUBLIC_URL}/home`} component={Home} />
+                    <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
                 </Switch>
             </Suspense>
         </Provider>

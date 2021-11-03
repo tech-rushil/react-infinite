@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Button, Form, notification } from "antd";
+import { useHistory } from "react-router-dom";
 
 import { InputText, InputPassword } from "../../components/Input/Input";
 import { login_user } from "../../utils/auth.util";
-import { useHistory } from "react-router-dom";
 
 const LoginCardWrapper = styled.div`
     padding: 32px;
@@ -71,7 +71,7 @@ const LoginCardWrapper = styled.div`
             box-shadow: 0 0 20px #eee;
             border-radius: 10px;
             cursor: pointer;
-            background-image: linear-gradient(to right, #5c97f7 0%, #6bcffd 51%, #5f99f7 100%);
+            background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%);
 
             :hover {
                 background-position: right center;
@@ -131,18 +131,27 @@ const Login = () => {
         const usr_data = {
             name: "Test User",
             username: "foo",
+            token: "test_user",
         };
 
-        // To set the User Cookie
-        login_user(usr_data);
-        notification.open({
-            message: "Login successful",
-            description: "Please wait while we redirect you",
-            type: "success",
-        });
+        if (values.userName === "foo" && values.password === "bar") {
+            // To set the User Cookie
+            login_user(usr_data);
+            notification.open({
+                message: "Login successful",
+                description: "Please wait while we redirect you",
+                type: "success",
+            });
+            history.replace("/home");
+        } else {
+            notification.open({
+                message: "Invalid credentials",
+                description: "Please use username: foo and password: bar to login",
+                type: "error",
+            });
+        }
 
         setbtnLoding(false);
-        history.replace("/");
     };
 
     const onFinishFailed = (errorInfo) => {
