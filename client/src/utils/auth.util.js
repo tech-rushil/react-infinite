@@ -28,10 +28,10 @@ const logout_user = () => {
     localStorage.clear();
     sessionStorage.clear();
     // Get rurl if its available
-    let rurl = getSearchParam('rurl');
-    rurl = rurl !== undefined && rurl !== null ? rurl : '';
+    let rurl = getSearchParam("rurl");
+    rurl = rurl !== undefined && rurl !== null ? rurl : "";
     // Clear learning platform cookie
-    window.location = G_URL + `login?rurl=${rurl}`;
+    window.location = G_URL;
 };
 
 const encHexSalt = (content) => {
@@ -42,9 +42,4 @@ const encHexSalt = (content) => {
     return encContent;
 };
 
-export {
-    login_user,
-    check_login,
-    logout_user,
-    encHexSalt
-};
+export { login_user, check_login, logout_user, encHexSalt };

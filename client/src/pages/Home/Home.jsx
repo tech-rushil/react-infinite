@@ -4,6 +4,7 @@ import CardSkelton from "../../components/Skelton/skelton";
 import { notification } from "antd";
 
 import { UserOutlined, MailOutlined } from "@ant-design/icons";
+import { logout_user } from "../../utils/auth.util";
 
 const Home = () => {
     const [loading, setloading] = useState(true);
@@ -77,9 +78,19 @@ const Home = () => {
         };
     }, [element]);
 
+    const handleLogout = () => {
+        logout_user();
+    };
+
     return (
         <>
             <div className="lr-pad-d lr-pad-m">
+                <div
+                    className="f-d f-h-c f-v-c logout-btn c-pointer body-regular"
+                    onClick={handleLogout}
+                >
+                    Logout
+                </div>
                 <ul>
                     {data.map((row) => (
                         <li key={row.email} className="">
@@ -103,9 +114,9 @@ const Home = () => {
                                                 row.name.last}
                                         </div>
                                     </div>
-                                    <div className="email mt-8">
+                                    <div className="email mt-8 f-d f-v-c">
                                         <MailOutlined className="mr-8" />
-                                        {row.email}
+                                        <div className="body-regular">{row.email}</div>
                                     </div>
                                 </div>
                             </div>
@@ -130,6 +141,16 @@ const Home = () => {
                     margin-bottom: 32px;
                 }
 
+                .logout-btn {
+                    width: 160px;
+                    height: 54px;
+                    border-radius: var(--peaky-br-4);
+                    background-color: var(--carbon);
+                    color: var(--dove);
+                    margin-left: auto;
+                    margin-bottom: 32px;
+                }
+
                 .card:hover {
                     background-color: var(--smoke);
                     transition: all 0.2s;
@@ -148,6 +169,11 @@ const Home = () => {
 
                 .card .card-body {
                     width: 70%;
+                    word-wrap: break-word;
+                }
+
+                .email {
+                    word-break: break-word;
                 }
 
                 .mt-16 {
