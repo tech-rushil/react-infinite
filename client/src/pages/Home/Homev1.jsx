@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const allData = new Array(50).fill(0).map((_val, i) => i + 1);
 
@@ -9,12 +9,12 @@ const Home = () => {
     const [page, setpage] = useState(1);
 
     // Load more
-    const loadMoreData = () => {
+    const loadMoreData = useCallback(() => {
         const currentPage = page + 1;
         const currentData = [...data, ...allData.slice(data.length, currentPage * 10)];
         setdata(currentData);
         setpage(currentPage);
-    };
+    }, []);
 
     const loader = React.useRef(loadMoreData);
 
