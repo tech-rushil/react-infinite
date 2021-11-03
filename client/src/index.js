@@ -10,6 +10,7 @@ import * as serviceWorker from "./serviceWorker";
 import { createBrowserHistory } from "history";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import WithAuth from "./components/Auth/AuthHoc";
 
 const history = createBrowserHistory();
 
@@ -18,7 +19,7 @@ function App() {
         <Provider store={store}>
             <Suspense fallback={<Loader />}>
                 <Switch history={history}>
-                    <Route exact path={`${process.env.PUBLIC_URL}/home`} component={Home} />
+                    <WithAuth exact path={`${process.env.PUBLIC_URL}/home`} component={Home} />
                     <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
                 </Switch>
             </Suspense>

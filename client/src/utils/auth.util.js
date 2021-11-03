@@ -1,5 +1,4 @@
 import { __deleteCookie, __getCookie, __setCookie } from "./cookie.util";
-import { getSearchParam } from "./common.util";
 import keys from "../config/keys";
 import { G_URL } from "../constants/constants";
 import CryptoJS from "crypto-js";
@@ -27,9 +26,7 @@ const logout_user = () => {
     // Clear Storage
     localStorage.clear();
     sessionStorage.clear();
-    // Get rurl if its available
-    let rurl = getSearchParam("rurl");
-    rurl = rurl !== undefined && rurl !== null ? rurl : "";
+
     // Clear learning platform cookie
     window.location = G_URL;
 };
