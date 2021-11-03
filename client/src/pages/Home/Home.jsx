@@ -53,7 +53,7 @@ const Home = () => {
             (entries) => {
                 const first = entries[0];
                 if (first.isIntersecting) {
-                    console.log("heelo instersecting");
+                    // console.log("heelo instersecting");
                     // loadMoreData();
                     loader.current();
                 }
