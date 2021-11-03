@@ -1,0 +1,15 @@
+client/node_modules
+server/node_modules
+server/uploads
+
+icon.png
+.DS_Store
+client/.babelrc
+.vscode/launch.json
+client/src/assests/antd-custom.less
+client/build
+server/build
+
+.editorconfig
+client/public/robots.txt
+debug.log

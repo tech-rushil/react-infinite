@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Poppins-Light.otf" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Poppins-Regular.otf" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Poppins-SemiBold.otf" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Poppins-Bold.otf" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Poppins-ExtraBold.otf" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Poppins-Black.otf" as="font" type="font" crossorigin />
+
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Inter-Thin.woff2" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Inter-Regular.woff2" as="font" type="font" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Inter-Bold.woff2" as="font" type="font" crossorigin />
+
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            font-weight: 200;
+            src: url("%PUBLIC_URL%/fonts/Poppins-Light.otf");
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-weight: 300;
+            src: url("%PUBLIC_URL%/fonts/Poppins-Regular.otf");
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-weight: 400;
+            src: url("%PUBLIC_URL%/fonts/Poppins-SemiBold.otf");
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-weight: 500;
+            src: url("%PUBLIC_URL%/fonts/Poppins-Bold.otf");
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-weight: 600;
+            src: url("%PUBLIC_URL%/fonts/Poppins-ExtraBold.otf");
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-weight: 700;
+            src: url("%PUBLIC_URL%/fonts/Poppins-Black.otf");
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            font-style:  normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url("%PUBLIC_URL%/fonts/Inter-Regular.woff2?v=3.15") format("woff2"),
+                 url("%PUBLIC_URL%/fonts/Inter-Regular.woff?v=3.15") format("woff");
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            font-style:  normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url("%PUBLIC_URL%/fonts/Inter-Light.woff2?v=3.15") format("woff2"),
+                 url("%PUBLIC_URL%/fonts/Inter-Light.woff?v=3.15") format("woff2");
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            font-style:  normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url("%PUBLIC_URL%/fonts/Inter-Bold.woff2?v=3.15") format("woff2"),
+                 url("%PUBLIC_URL%/fonts/Inter-Bold.woff?v=3.15") format("woff2");
+        }
+    </style>
+
+    <!-- HTML Meta Tags -->
+    <title>Ahoy!</title>
+    <meta name="description"
+        content="Brewing Skeleton!" />
+
+    <!-- Google / Search Engine Tags -->
+
+    <!-- <meta itemprop="name" content="Title to SEO Meta" />
+    <meta
+        itemprop="description"
+        content="Here goes SEO Meta description"
+    />
+    <meta itemprop="image" content="" /> -->
+
+    <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`. -->
+</head>
+
+<body>
+    <noscript>This ain't it Boss!</noscript>
+    <div id="root"></div>
+    <script>
+        //if ("serviceWorker" in navigator) {
+        //    window.addEventListener("load", () => {
+        //        navigator.serviceWorker.register("/service-worker.js");
+        //    });
+        //}
+    </script>
+</body>
+
+</html>
